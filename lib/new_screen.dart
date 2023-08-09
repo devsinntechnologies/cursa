@@ -1,4 +1,8 @@
+import 'package:cursa/utils/constants.dart';
+import 'package:cursa/view/widget.dart';
 import 'package:flutter/material.dart';
+
+import 'controler/image.dart';
 
 class NewScreen extends StatelessWidget {
   const NewScreen({super.key});
@@ -8,14 +12,20 @@ class NewScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.red,
-              )
-            ],
+          SingleChildScrollView(
+            child: Row(
+              children: [
+                // CustomContainer(
+                //   hieght: 80,
+                //   width: 80,
+                //   image: NetworkImage(image1),
+                //   color: MyColors.red,
+                // ),
+                myavatar(40, image1), myavatar(40, image1),
+                myavatar(40, image1),
+                myavatar(40, image1), myavatar(40, image1), myavatar(40, image1)
+              ],
+            ),
           )
         ],
       ),
