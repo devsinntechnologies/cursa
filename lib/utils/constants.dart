@@ -5,4 +5,7 @@ class MyColors {
   static const black = Colors.black;
   static const white = Colors.white;
   static const yellow = Colors.yellow;
+  static const green = Colors.green;
+  static const grey = Colors.grey;
+  static const purple = Colors.purple;
 }
