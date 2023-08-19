@@ -419,7 +419,7 @@ class NewScreen extends StatelessWidget {
                     SmallCard(
                       hieght: 100,
                       width: 120,
-                      color: MyColors.green,
+                      color: Color.fromARGB(255, 175, 173, 76),
                       image: worldimage,
                       text: 'Web Development',
                       fontsize: 15,
@@ -432,7 +432,7 @@ class NewScreen extends StatelessWidget {
                     SmallCard(
                       hieght: 100,
                       width: 100,
-                      color: MyColors.green,
+                      color: Color.fromARGB(255, 76, 122, 175),
                       image: worldimage,
                       text: 'French',
                       fontsize: 20,
@@ -445,7 +445,7 @@ class NewScreen extends StatelessWidget {
                     SmallCard(
                       hieght: 100,
                       width: 120,
-                      color: MyColors.green,
+                      color: Color.fromARGB(255, 175, 76, 76),
                       image: worldimage,
                       text: 'Web Development',
                       fontsize: 15,
@@ -510,6 +510,17 @@ class NewScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Customtext('Choose by', 15, FontWeight.bold),
+                Row(
+                  children: [
+                    Customtext('Featured courses', 17, FontWeight.bold)
+                  ],
+                )
+              ],
             )
           ],
         ),

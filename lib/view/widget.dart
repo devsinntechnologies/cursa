@@ -3,15 +3,19 @@ import 'package:cursa/utils/image.dart';
 import 'package:flutter/material.dart';
 
 class Customtext extends StatelessWidget {
-  var text, fontsize, fontwieght, color;
-  Customtext(@required this.text, this.fontsize, this.fontwieght, {this.color});
+  var text, fontsize, fontwieght, color, fontfamily;
+  Customtext(@required this.text, this.fontsize, this.fontwieght,
+      {this.color, this.fontfamily});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style:
-          TextStyle(fontSize: fontsize, fontWeight: fontwieght, color: color),
+      style: TextStyle(
+          fontSize: fontsize,
+          fontWeight: fontwieght,
+          color: color,
+          fontFamily: fontfamily),
     );
   }
 }
@@ -258,6 +262,49 @@ class TextCard extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
           color: color, borderRadius: BorderRadius.circular(circular)),
+    );
+  }
+}
+
+class BorderContainer extends StatelessWidget {
+  var height,
+      width,
+      text,
+      fontsize,
+      bcolor,
+      fontwieght,
+      circular,
+      tcolor,
+      containercolor,
+      borderwidth;
+  BorderContainer(
+      {this.borderwidth,
+      this.containercolor,
+      this.fontsize,
+      this.bcolor,
+      this.fontwieght,
+      this.height = 80,
+      this.tcolor,
+      this.circular,
+      this.text,
+      this.width = 80});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+              fontSize: fontsize, fontWeight: fontwieght, color: tcolor),
+        ),
+      ),
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(circular),
+          color: containercolor,
+          border: Border.all(width: borderwidth, color: bcolor)),
     );
   }
 }
